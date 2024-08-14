@@ -63,7 +63,7 @@ export function App() {
           onChange={async (newValue) => {
             if (newValue === null) {
               return
-            } else if (newValue == EMPTY_EMPLOYEE) {
+            } else if (newValue === EMPTY_EMPLOYEE) {
               await paginatedTransactionsUtils.fetchAll()
             } else {
               await loadTransactionsByEmployee(newValue.id)
